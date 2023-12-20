@@ -1,0 +1,28 @@
+version: '3'
+services:
+  insurance-apis:
+    image: ashitcmd/dripbox:latest
+    ports:
+      - "8080:8080"  # Map the API port to the host
+    depends_on:
+      - mysql-db  # Ensure that MySQL service is started before apis
+
+  mysql-db:
+    image: mysql:latest
+    ports:
+      - "3306:3306"  # Map the MySQL port to the host
+    volumes:
+      - mysql_data:/var/lib/mysql  # Volume for MySQL data persistence
+    environment:
+      MYSQL_ROOT_PASSWORD: 123456789
+      MYSQL_DATABASE: dripboxdb
+
+ 
+
+      MYSQL_HOST: mysql-db 
+ 
+
+volumes:
+  mysql_data:      # Volume definition for MySQL data persistence
+
+

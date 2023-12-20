@@ -1,0 +1,7 @@
+com\example\dripbox\DripboxApplication.class
+com\example\dripbox\controller\FileController.class
+com\example\dripbox\entity\File.class
+com\example\dripbox\entity\File$FileBuilder.class
+com\example\dripbox\repository\FileRepository.class
+com\example\dripbox\payload\FileResponse.class
+com\example\dripbox\config\CorsConfig.class
